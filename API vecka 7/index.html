@@ -1,0 +1,16 @@
+<html>
+    <body>
+      <h1>Dokumentation av det här APIet</h1>
+      <h2>Routes</h2>
+
+      <ul>
+        <li><em>POST /users</em> - skapar en ny användare med hashat lösenord, accepterar JSON objekt på formatet {"firstname": "", "lastname": "", "nickname": "", "passwrd": ""}. <code>allt</code> är obligatoriskt.</li>
+        <li><em>POST /login</em> - inloggning, accepterar JSON-objekt på formatet {"firstname": "", "lastname": "", "nickname": "", "passwrd": ""}. <code>allt</code> är obligatoriskt.</li>
+        <li><em>GET /users</em> - endast Admin har tillgång - behöver admin token genom login.</li>
+        <li><em>GET /users:id</em> - Admin har tillgång till alla, users har endast tillgång till sin egna. Om User - Krävs rätt token kopplat till ID't. </li>
+        <li><em>PUT /users</em> - ändring av data, accepterar JSON-objekt på formatet {"firstname": "", "lastname": "", "nickname": "", "passwrd": ""}. <code>allt</code> är obligatoriskt.</li>
+      </p>
+
+    </body>
+
+  </html>
