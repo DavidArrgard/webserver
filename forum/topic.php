@@ -53,12 +53,12 @@ if (!$result) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<tr>';
                     echo '<td>';
-                    echo $row['user_name'];
+                    echo str_replace('<', '/&lt', str_replace('>', '/&gt', $row['user_name']));
                     echo '<br>';
                     echo date('d-m-Y', strtotime($row['post_date']));
                     echo '</td>';
                     echo '<td class="leftpart">';
-                    echo $row['post_content'];
+                    echo str_replace('<', '/&lt', str_replace('>', '/&gt', $row['post_content']));
                     echo '</td>';
                     echo '</tr>';
                 }

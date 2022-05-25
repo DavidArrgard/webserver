@@ -23,7 +23,7 @@ if (!$result) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<tr>';
             echo '<td class="leftpart">';
-            echo '<h3><a href="category.php?id=' . $row['cat_id'] . '" >' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
+            echo '<h3><a href="category.php?id=' . str_replace('<', '/&lt', str_replace('>', '/&gt', $row['cat_id'])) . '" >' . str_replace('<', '/&lt', str_replace('>', '/&gt', $row['cat_name'])) . '</a></h3>' . str_replace('<', '/&lt', str_replace('>', '/&gt', $row['cat_description']));
             echo '</td>';
             echo '<td class="rightpart">';
             echo '<a href="topic.php?id=">Topic subject</a> at 10-10';
